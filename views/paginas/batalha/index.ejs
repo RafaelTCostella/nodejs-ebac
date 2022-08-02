@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/battle.css">
+
+<div class="row justify-content-end align-items-center battle">
+  <div class="col align-self-center data-font appear-after-slide highlight-color">
+    <%- include('pokemons/partials/poke-info', {
+      nome: pokemon.nome,
+      altura: pokemon.altura,
+      peso: pokemon.peso,
+      ataques: pokemon.ataques,
+      jogos: pokemon.jogos,
+      estatisticas: pokemon.estatisticas,
+    }) %>
+  </div>
+  <div class="col pokemon-wrapper">
+    <input type="hidden" value="<%= pokemon.id %>" name="pokeId" id="pokeId" />
+    <img src="<%= pokemon.imagem %>" alt="Imagem do pokemon <%= pokemon.nome %>" class="battle-figure" />
+    <img src="/images/field.png" alt="Campo pokemon" class="field">
+
+    <div class="pokeball">
+      <div class="pokeball-button"></div>
+    </div>
+  </div>
+</div>
+
+<br /><br /><br />
+
+<div class="row align-items-center">
+  <div class="col trainer-wrapper">
+    <img src="/images/trainer.png" alt="Treinador pokemon" class="battle-figure">
+    <img src="/images/field.png" alt="Campo pokemon" class="field">
+  </div>
+  <div class="col">
+    <div class="d-grid gap-3 button-battle-group appear-after-slide">
+      <a href="#" class="btn btn-warning capture-pokemon">TENTAR CAPTURAR</a>
+      <a href="/" class="btn btn-warning">FUGIR</a>
+    </div>
+  </div>
+</div>
+
+<script src="/javascripts/battle.js" type="text/javascript"></script>

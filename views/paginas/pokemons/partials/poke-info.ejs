@@ -1,0 +1,101 @@
+<h3 class="text-center text-uppercase"><b><%= nome %></b></h3>
+<br />
+<p class="text-center"><b>Altura: </b> <%= (altura * 10) %>cm</p>
+<p class="text-center"><b>Peso: </b> <%= (peso * 100) / 1000 %>kg</p>
+<p class="text-center"><b>Poderes: </b> <%= ataques %></p>
+<div class="stats">
+  <div class="info">
+    <div class="row">
+      <div class="col-4">
+        <p class="label text-center">HP: </p>
+      </div>
+      <div class="col-8">
+        <div class="progress">
+          <div
+            class="progress-bar bg-info"
+            role="progressbar"
+            aria-valuenow="<%= estatisticas['hp'] %>"
+            aria-valuemin="0"
+            aria-valuemax="255"
+            style="width: <%= (estatisticas['hp'] / 255) * 100 %>%"
+            >
+            <%= estatisticas['hp'] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="row">
+      <div class="col-4">
+        <p class="label text-center">Ataque: </p>
+      </div>
+      <div class="col-8">
+        <div class="progress">
+          <div
+            class="progress-bar bg-warning"
+            role="progressbar"
+            aria-valuenow="<%= estatisticas['attack'] %>"
+            aria-valuemin="0"
+            aria-valuemax="180"
+            style="width: <%= (estatisticas['attack'] / 180) * 100 %>%"
+            >
+            <%= estatisticas['attack'] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="row">
+      <div class="col-4">
+        <p class="label text-center">Defesa: </p>
+      </div>
+      <div class="col-8">
+        <div class="progress">
+          <div
+            class="progress-bar bg-danger"
+            role="progressbar"
+            aria-valuenow="<%= estatisticas['defense'] %>"
+            aria-valuemin="0"
+            aria-valuemax="230"
+            style="width: <%= (estatisticas['defense'] / 230) * 100 %>%"
+            >
+            <%= estatisticas['defense'] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info">
+    <div class="row">
+      <div class="col-4">
+        <p class="label text-center">Velocidade: </p>
+      </div>
+      <div class="col-8">
+        <div class="progress">
+          <div
+            class="progress-bar bg-success"
+            role="progressbar"
+            aria-valuenow="<%= estatisticas['speed'] %>"
+            aria-valuemin="0"
+            aria-valuemax="180"
+            style="width: <%= (estatisticas['speed'] / 180) * 100 %>%"
+            >
+            <%= estatisticas['speed'] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% if (locals.jogos) { %>
+  <p class="text-center"><b>Jogos que aparece: </b>
+    <% jogos.forEach((jogo) => { %>
+      <span class="badge bg-info text-dark"><%= jogo %></span>
+    <% }) %>
+    <% if (jogos.length === 0) { %>
+      <span class="badge bg-danger text-dark">Nenhum :(</span>
+    <% } %>
+  </p>
+<% } %>
