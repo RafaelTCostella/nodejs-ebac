@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/pokemon.css">
+
+<div class="row">
+  <div class="col">
+    <h1 class="text-center data-font title highlight-color">POKEDEX</h1>
+  </div>
+</div>
+
+<div class="row pokedex-wrapper">
+  <% if (pokemons.length === 0) { %>
+    <h3 class="highlight-color text-center">Ooops! Nenhum pokemon capturado ainda! :(</h3>
+  <% } %>
+  <% pokemons.forEach((pokemon) => { %>
+    <div class="col">
+      <a href="/pokemons/<%= pokemon._id %>" class="open-poke">
+        <div class="card poke-card" style="width: 22rem;">
+          <img src="<%= pokemon.imagem %>" class="card-img-top" alt="Imagem do pokemon <%= pokemon.nome %>">
+          <div class="card-body">
+            <p class="text-center data-font">
+              <b>
+                <%= pokemon.nome.toUpperCase() %>
+              </b>
+            </p>
+            <p><b>Id:</b> #<%= pokemon.id %></p>
+            <% if (pokemon.capturadoEm) { %>
+              <p><b>Capturado em:</b> <%= pokemon.capturadoEm %> </p>
+            <% } %>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% }) %>
+</div>
+<div class="row">
+  <a href="/" class="btn btn-warning btn-pokedex">HOME</a>
+</div>

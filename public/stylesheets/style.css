@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'PKMN RBYGSC';
+  src: url('/fonts/PKMN-RBYGSC.eot');
+  src: url('/fonts/PKMN-RBYGSC.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/PKMN-RBYGSC.woff2') format('woff2'),
+      url('/fonts/PKMN-RBYGSC.woff') format('woff'),
+      url('/fonts/PKMN-RBYGSC.ttf') format('truetype'),
+      url('/fonts/PKMN-RBYGSC.svg#PKMN-RBYGSC') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, html {
+  background-image:  url('/images/bg.jpg');
+  background-size: cover;
+  min-height: 100%;
+}
+
+.btn {
+  font-family: 'Press Start 2P';
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0 20px 10px ;
+  text-shadow: -1px -1px black, 1px 1px white;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 .2em gray !important;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+.btn.loading {
+  cursor: wait;
+  animation: blink-animation 450ms steps(5, start) infinite;
+  -webkit-animation: blink-animation 450ms steps(5, start) infinite;
+}
+
+.btn:hover, .btn:active {
+  color: white;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: .2em;
+}
+
+.btn-pokedex {
+  width: 200px;
+  margin: 40px auto;
+}
+
+#battle-pre-loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: black;
+  display: none;
+  animation: blink-animation 450ms steps(5, start) infinite;
+  -webkit-animation: blink-animation 450ms steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.data-font {
+  font-family: 'PKMN RBYGSC';
+}
+
+.highlight-color {
+  color: #f1c40f;
+}
+
+.pikachu-error {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  text-align: center;
+  border-radius: 12px;
+  outline-color: #f1c40f;
+  color: #f1c40f;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.container {
+  padding: 40px 0px;
+}
+
+.separator-login {
+  color: #f1c40f;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.separator-login::before, .separator-login::after {
+  content: ' ';
+  height: 2px;
+  top: 50%;
+  background: #f1c40f;
+  width: 35%;
+  left: 0px;
+  position: absolute;
+}
+
+.separator-login::after {
+  left: initial;
+  right: 0px;
+}
