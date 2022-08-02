@@ -1,0 +1,27 @@
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-5 justify-content-center align-items-center">
+        <div class="card" style="width: 22rem; margin-left: auto; margin-right: auto;">
+        <img src="<%= pokemon.imagem %>" class="card-img-top" alt="Imagem do pokemon <%= pokemon.nome %>">
+        <div class="card-body">
+            <%- include('partials/poke-info', {
+            nome: pokemon.nome,
+            altura: pokemon.altura,
+            ataques: pokemon.ataques,
+            peso: pokemon.peso,
+            estatisticas: pokemon.estatisticas,
+            }) %>
+        </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="d-grid gap-3 button-battle-group">
+        <% if (message !== undefined) { %>
+            <h2 class="text-center highlight-color">
+            <b>PARABÉNS!! POKEMON CAPTURADO</b>
+            </h2>
+        <% } %>
+        <a href="/pokemons" class="btn btn-warning">POKEDEX</a>
+        <a href="/" class="btn btn-warning">HOME</a>
+        </div>
+    </div>
+</div>
