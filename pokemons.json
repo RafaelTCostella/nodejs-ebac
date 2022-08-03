@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "62e9bd1eec66befdbfa51cbf"
+  },
+  "id": 1,
+  "nome": "bulbasaur",
+  "altura": 7,
+  "peso": 69,
+  "imagem": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "ataques": "overgrow, chlorophyll",
+  "estatisticas": {
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "special-attack": 65,
+    "special-defense": 65,
+    "speed": 45
+  }
+},{
+  "_id": {
+    "$oid": "62e9be0aec66befdbfa51cc0"
+  },
+  "id": 9,
+  "nome": "blastoise",
+  "altura": 16,
+  "peso": 855,
+  "imagem": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+  "ataques": "torrent, rain-dish",
+  "estatisticas": {
+    "hp": 79,
+    "attack": 83,
+    "defense": 100,
+    "special-attack": 85,
+    "special-defense": 105,
+    "speed": 78
+  }
+},{
+  "_id": {
+    "$oid": "62e9be52ec66befdbfa51cc1"
+  },
+  "id": 4,
+  "nome": "charmander",
+  "altura": 6,
+  "peso": 85,
+  "imagem": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+  "ataques": "blaze, solar-power",
+  "estatisticas": {
+    "hp": 39,
+    "attack": 52,
+    "defense": 43,
+    "special-attack": 60,
+    "special-defense": 50,
+    "speed": 65
+  }
+},{
+  "_id": {
+    "$oid": "62e9be62ec66befdbfa51cc2"
+  },
+  "id": 25,
+  "nome": "pikachu",
+  "altura": 4,
+  "peso": 60,
+  "imagem": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+  "ataques": "static, lightning-rod",
+  "estatisticas": {
+    "hp": 35,
+    "attack": 55,
+    "defense": 40,
+    "special-attack": 50,
+    "special-defense": 50,
+    "speed": 90
+  }
+}]
