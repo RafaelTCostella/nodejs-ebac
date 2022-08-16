@@ -1,0 +1,29 @@
+<div class="row align-items-center">
+    <div class="col">
+        <div class="d-grid gap-5">
+        <img src="/images/pokemon-home.png" class="img-fluid" alt="Logo pokemon" />
+
+        <form action="/auth" method="post">
+            <div class="d-grid gap-2">
+            <input name="email" type="email" placeholder="email" />
+            <input name="password" type="password" placeholder="senha" />
+
+            <% if (error) { %>
+                <p class="text-center error-message">usuário / senha incorretos</p>
+            <% } %>
+            <button type="submit" class="btn btn-warning">LOGIN</button>
+
+            <p class="separator-login">OU</p>
+
+            <a href="/auth/google" class="btn btn-outline-warning">GOOGLE LOGIN</a>
+            <a href="/auth/github" class="btn btn-outline-warning">GITHUB LOGIN</a>
+            </div>
+        </form>
+
+
+        </div>
+    </div>
+    <div class="col">
+        <img src="/images/pikachu-home.png" class="img-fluid" alt="Pikachu dando oi" />
+    </div>
+</div>
